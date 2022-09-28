@@ -1,0 +1,124 @@
+.landingpage {
+  background-color: #cbe3fc;
+}
+
+.landingsectioncontainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.landingsectioncontainer .illustration {
+  width: 40vw;
+  max-width: 720px;
+}
+
+.landingsectioncontainer .illustration img {
+  width: 100%;
+}
+
+.landingsectioncontainer .description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: right;
+  width: 40vw;
+}
+
+.landingsectioncontainermid {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.landingsectioncontainermid .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .landingsectioncontainer {
+    flex-direction: column;
+    padding: 20px 0px;
+  }
+  .landingsectioncontainer .description {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .landingsectioncontainer .descriptionright {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .landingsectioncontainer .illustration {
+    width: 100%;
+  }
+}
+
+.downarrowcontainer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0px;
+}
+
+.downarrow {
+  width: 30px;
+  height: 30px;
+  border-left: 1px solid var(--secondary);
+  border-bottom: 1px solid var(--secondary);
+  animation: slightupdown 2s infinite;
+}
+
+@keyframes slightupdown {
+  from {
+    transform: rotate(-45deg) translateY(-50%) translateX(50%);
+  }
+  to {
+    transform: rotate(-45deg) translateY(50%) translateX(-50%);
+  }
+}
+
+.multipiccarousel {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.multipiccarousel img {
+  width: 100%;
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+}
+
+.outermostimg {
+  width: 200px;
+  z-index: 0;
+}
+
+.innerimg {
+  width: 300px;
+  z-index: 1;
+  margin: 0px 10px;
+}
+
+.centerimg {
+  width: 400px;
+  z-index: 2;
+}
